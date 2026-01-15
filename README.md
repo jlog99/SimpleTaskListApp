@@ -1,14 +1,17 @@
 # Simple Task List Web Application
 
-A full-stack task management web application built with ASP.NET Core Web API (C#) backend and React (TypeScript) frontend. This application allows users to manage their tasks with features like creating, editing, deleting tasks, tracking task status, and uploading profile images.
+A full-stack task management web application built with ASP.NET Core Web API (C#) backend and React (TypeScript) frontend. This application allows users to manage their tasks with features like creating, editing, deleting tasks, tracking task status, and uploading a profile image.
 
 ## Features
 
 - **Task Management**
-  - Create new tasks with title, description, and status
+  - Create a task list
+  - Delete a task list 
+  - Rename a task list 
+  - Create new tasks in a list with a title, description, and status
   - Edit existing tasks
   - Delete tasks
-  - Mark tasks as done/not done
+  - Mark tasks as done/in progress/not done
   - View task status (Pending, In Progress, Completed)
 
 - **Task Statistics**
@@ -16,14 +19,14 @@ A full-stack task management web application built with ASP.NET Core Web API (C#
   - Visual indicators with color-coded badges
 
 - **Profile Management**
-  - Upload profile images (JPEG, PNG, GIF)
+  - Upload profile image (JPEG, PNG, GIF)
   - Display profile image on dashboard
-  - Delete profile images
+  - Delete profile image
 
 - **User Experience**
   - Responsive design for mobile, tablet, and desktop
   - Cross-browser compatible
-  - Modern, clean UI with intuitive navigation
+  - Simple, clean UI with navigation
   - Loading states and error handling
 
 ## Technology Stack
@@ -33,7 +36,6 @@ A full-stack task management web application built with ASP.NET Core Web API (C#
 - Entity Framework Core 8.0
 - SQLite Database
 - RESTful Web API
-- Swagger/OpenAPI documentation
 
 ### Frontend
 - React 18+
@@ -72,7 +74,7 @@ TaskListApp/
 
 1. Navigate to the API project directory:
    ```bash
-   cd TaskListApp.API
+   cd SimpleTaskListApp.Server
    ```
 
 2. Restore dependencies and build:
@@ -82,19 +84,18 @@ TaskListApp/
    ```
 
 3. Run the API:
+
+This solution was built using the .NET & React template so can be run from Visual Studio/Code via the run/debug button
+
    ```bash
    dotnet run
    ```
-
-   The API will be available at:
-   - HTTP: `http://localhost:5021`
-   - Swagger UI: `http://localhost:5021/swagger`
 
 ### Frontend Setup
 
 1. Navigate to the frontend project directory:
    ```bash
-   cd tasklistapp-web
+   cd simpletasklistapp.client
    ```
 
 2. Install dependencies:
@@ -111,7 +112,7 @@ TaskListApp/
 
 ### Configuration
 
-The frontend is configured to connect to the API at `http://localhost:5143/api` by default. If your API runs on a different port, you can:
+The frontend is configured to connect to the API at `http://localhost:5143` by default. If your API runs on a different port, you can:
 
 1. Create a `.env` file in the `tasklistapp-web` directory:
    ```
@@ -158,27 +159,31 @@ The application is designed with multi-user support in mind:
 - Easy to add ASP.NET Identity for authentication
 
 ### Cross-Browser Compatibility
-- Tested on Chrome, Firefox, Safari, and Edge
+- Tested on Chrome
 - Responsive design using CSS Grid and Flexbox
-- Mobile-first approach
-- Touch-friendly UI elements
 
 ## Building for Production
 
 ### Backend
 ```bash
-cd TaskListApp.API
+cd SimpleTaskListApp.Server
 dotnet publish -c Release
 ```
 
 ### Frontend
 ```bash
-cd tasklistapp-web
+cd simpletasklistapp.client
 npm run build
 ```
 
 The production build will be in the `dist` directory.
 
-## License
+## Limitations
 
-This project is created for demonstration purposes.
+This is intended for development purposes only and as such has some limitations:
+- Front end could benefit from a global error service to display errors from SideBar and TaskList in the same place
+- For production readiness separation of backend and frontend into their own solutions may offer more flexibility 
+- Some light unit tests for CRUD operations would be beneficial
+- Have consistent naming between backend and frontend regarding 'Task' as this interfers with build in Language mechanisms
+- Split data, services etc into own assembly for better organisation and flexibility for CI/CD purposes
+- Improve UI, align colours with a more neutral and modern design and reduce number of click points

@@ -1,4 +1,5 @@
 taskList.db
+*.db*
 
 .vs/
 .vscode/
@@ -30,3 +31,6 @@ publish/
 
 .vsconfig
 *.ide.*
+
+wwwroot/
+.png
