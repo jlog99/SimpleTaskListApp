@@ -1,4 +1,6 @@
-*.db
+taskList.db
+taskList.db-shm
+taskList.db-wal
 
 .vs/
 .vscode/
