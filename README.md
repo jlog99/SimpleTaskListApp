@@ -180,22 +180,6 @@ The application is designed with multi-user support in mind:
 - Tested on Chrome
 - Responsive design using CSS Grid and Flexbox
 
-## Building for Production
-
-### Backend
-```bash
-cd SimpleTaskListApp.Server
-dotnet publish -c Release
-```
-
-### Frontend
-```bash
-cd simpletasklistapp.client
-npm run build
-```
-
-The production build will be in the `dist` directory.
-
 ## Limitations
 
 This is intended for development purposes only and as such has some limitations:
@@ -205,3 +189,4 @@ This is intended for development purposes only and as such has some limitations:
 - Have consistent naming between backend and frontend regarding 'Task' as this interfers with build in Language mechanisms
 - Split data, services etc into own assembly for better organisation and flexibility for CI/CD purposes
 - Improve UI, align colours with a more neutral and modern design and reduce number of click points
+- Initial seeding of DB is carried out to allow for quickly running and testing the app, ideally User would create a Profile and then create tasks
