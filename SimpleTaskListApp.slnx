@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="simpletasklistapp.client/simpletasklistapp.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="SimpleTaskListApp.Server/SimpleTaskListApp.Server.csproj" />
+</Solution>

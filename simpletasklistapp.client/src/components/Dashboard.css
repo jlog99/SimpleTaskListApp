@@ -1,0 +1,150 @@
+.dashboard {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 0.75rem;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.dashboard-header {
+	background: rgb(8, 31, 97);
+	padding: 0.75rem 1rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 0.75rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	flex-shrink: 0;
+}
+
+.dashboard-header h1 {
+	margin: 0;
+	color: rgb(210, 180, 90);
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.dashboard-layout {
+	display: flex;
+	gap: 0.75rem;
+	flex: 1;
+	min-height: 0;
+	overflow: hidden;
+}
+
+.dashboard-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.task-section {
+	background: white;
+	padding: 0.75rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	overflow: hidden;
+}
+
+.task-section h2 {
+	margin: 0 0 0.75rem 0;
+	color: #333;
+	font-size: 1.1rem;
+	font-weight: 600;
+	border-bottom: 2px solid #e0e0e0;
+	padding-bottom: 0.5rem;
+	flex-shrink: 0;
+}
+
+.error-banner {
+	background-color: #ffa1a9;
+	color: black;
+	padding: 0.5rem 0.75rem;
+	border-radius: 6px;
+	margin-bottom: 0.75rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #f5c6cb;
+	flex-shrink: 0;
+	font-size: 0.9rem;
+}
+
+.error-close {
+	background: none;
+	border: none;
+	color: #721c24;
+	font-size: 1.5rem;
+	cursor: pointer;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+}
+
+.error-close:hover {
+	background-color: #f5c6cb;
+	border-radius: 50%;
+}
+
+.loading {
+	text-align: center;
+	padding: 1rem;
+	color: #666;
+	font-size: 0.95rem;
+}
+
+.no-task-list-selected {
+	background: white;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	color: #666;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+	.dashboard {
+		padding: 0.5rem;
+	}
+
+	.dashboard-header {
+		flex-direction: row;
+		padding: 0.5rem 0.75rem;
+	}
+
+	.dashboard-header h1 {
+		font-size: 1.1rem;
+	}
+
+	.dashboard-layout {
+		flex-direction: column;
+	}
+
+	.dashboard-content {
+		padding: 0;
+	}
+
+	.task-section {
+		padding: 0.5rem;
+	}
+
+	.task-section h2 {
+		font-size: 1rem;
+	}
+}
