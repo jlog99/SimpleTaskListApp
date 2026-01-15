@@ -33,7 +33,7 @@ A full-stack task management web application built with ASP.NET Core Web API (C#
 
 ### Backend
 - ASP.NET Core 10.0 (C#)
-- Entity Framework Core 8.0
+- Entity Framework Core 10.0
 - SQLite Database
 - RESTful Web API
 
@@ -47,14 +47,14 @@ A full-stack task management web application built with ASP.NET Core Web API (C#
 ## Project Structure
 
 ```
-TaskListApp/
-├── TaskListApp.API/              # ASP.NET Core Web API
+SimpleTaskListApp/
+├── SimpleTaskListApp.Server/    # ASP.NET Core Web API
 │   ├── Controllers/              # API Controllers
 │   ├── Models/                   # Data Models and DTOs
 │   ├── Services/                 # Business Logic Services
 │   ├── Data/                     # Database Context and Initialization
 │   └── wwwroot/                  # Static files (profile images)
-├── tasklistapp-web/              # React Frontend
+├── simpletasklistapp.client/     # React Frontend
 │   ├── src/
 │   │   ├── components/          # React Components
 │   │   ├── services/             # API Service Layer
@@ -64,11 +64,35 @@ TaskListApp/
 
 ## Prerequisites
 
-- .NET 8.0 SDK
+- .NET 10.0 SDK
 - Node.js 18+ and npm
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 
 ## Getting Started
+
+### Quick Start
+
+For the fastest setup, run these commands from the project root:
+
+**Backend:**
+```bash
+cd SimpleTaskListApp.Server
+dotnet restore
+dotnet run
+```
+
+**Frontend (in a new terminal):**
+```bash
+cd simpletasklistapp.client
+npm install
+npm run dev
+```
+
+The application will be available at:
+- Frontend: `http://localhost:5173`
+- Backend API: `http://localhost:5021`
+
+> **Note:** This solution was built using the .NET & React template and can also be run directly from Visual Studio/VS Code via the run/debug button, which will start both the backend and frontend together.
 
 ### Backend Setup
 
@@ -112,14 +136,14 @@ This solution was built using the .NET & React template so can be run from Visua
 
 ### Configuration
 
-The frontend is configured to connect to the API at `http://localhost:5143` by default. If your API runs on a different port, you can:
+The frontend is configured to connect to the API at `http://localhost:5021` by default. If your API runs on a different port, you can:
 
-1. Create a `.env` file in the `tasklistapp-web` directory:
+1. Create a `.env` file in the `simpletasklistapp.client` directory:
    ```
-   VITE_API_BASE_URL=http://localhost:YOUR_PORT/api
+   VITE_API_BASE_URL=http://localhost:YOUR_PORT
    ```
 
-2. Or update the default URL in `tasklistapp-web/src/services/api.ts`
+2. Or update the default URL in `simpletasklistapp.client/src/services/api.ts`
 
 ## API Endpoints
 
@@ -139,7 +163,7 @@ The frontend is configured to connect to the API at `http://localhost:5143` by d
 
 ## Database
 
-The application uses SQLite for data storage. The database file (`tasklist.db`) will be created automatically in the API project directory on first run.
+The application uses SQLite for data storage. The database file (`taskList.db`) will be created automatically in the API project directory on first run.
 
 A default user "Ali" is created automatically for single-user mode. The architecture is prepared for multi-user expansion in the future.
 

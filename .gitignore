@@ -32,5 +32,5 @@ publish/
 .vsconfig
 *.ide.*
 
-wwwroot/
-.png
+# Uploaded files
+wwwroot/uploads/
