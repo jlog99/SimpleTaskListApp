@@ -72,25 +72,7 @@ SimpleTaskListApp/
 
 ### Quick Start
 
-For the fastest setup, run these commands from the project root:
-
-**Backend:**
-```bash
-cd SimpleTaskListApp.Server
-dotnet restore
-dotnet run
-```
-
-**Frontend (in a new terminal):**
-```bash
-cd simpletasklistapp.client
-npm install
-npm run dev
-```
-
-The application will be available at:
-- Frontend: `http://localhost:5173`
-- Backend API: `http://localhost:5021`
+For the fastest setup open Visual Studio and open the project from root then click 'Run' (http).
 
 > **Note:** This solution was built using the .NET & React template and can also be run directly from Visual Studio/VS Code via the run/debug button, which will start both the backend and frontend together.
 
@@ -114,6 +96,9 @@ This solution was built using the .NET & React template so can be run from Visua
    ```bash
    dotnet run
    ```
+
+	The backend will be available at: `http://localhost:5021`
+  
 
 ### Frontend Setup
 

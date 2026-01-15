@@ -1,5 +1,4 @@
-taskList.db
-*.db*
+*.db
 
 .vs/
 .vscode/
