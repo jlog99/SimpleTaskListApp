@@ -72,7 +72,9 @@ SimpleTaskListApp/
 
 ### Quick Start
 
-For the fastest setup open Visual Studio and open the project from root then click 'Run' (http).
+For the fastest setup open solution in Visual Studio, select 'Http' profile and run.
+
+Command shell will build db and then a separate shell will open to run front end with url.
 
 > **Note:** This solution was built using the .NET & React template and can also be run directly from Visual Studio/VS Code via the run/debug button, which will start both the backend and frontend together.
 
@@ -131,6 +133,13 @@ The frontend is configured to connect to the API at `http://localhost:5021` by d
 2. Or update the default URL in `simpletasklistapp.client/src/services/api.ts`
 
 ## API Endpoints
+
+### TaskLists
+- `GET /api/tasklists` - Get all tasklists
+- `GET /api/tasklist/{id}` - Get tasklist by ID
+- `POST /api/tasklist` - Create a new tasklist
+- `PUT /api/tasklist/{id}` - Update a tasklist
+- `DELETE /api/tasklist/{id}` - Delete a tasklist
 
 ### Tasks
 - `GET /api/tasks` - Get all tasks
